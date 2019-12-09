@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <script src="client.js"></script>
+    <style>
+        #barwrapper {
+            width: 100%;
+            height: 15px;
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+
+        #progressbar {
+            width: 0%;
+            height: 15px;
+            border-right: 1px solid #000000;
+            background: #d65946;
+        }
+
+        #percentage {
+            color: #000000;
+            font-size: 15px;
+            font-style: italic;
+            font-weight: bold;
+            left: 25px;
+            position: relative;
+            top: -16px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="textToUppercase" value="text to uppercase">
+    <button id="createButton" onclick="createTask()">Create Task</button>
+    <div id="barwrapper" style="display:none;">
+        <div id="progressbar">
+        </div>
+        <div id="percentage">
+        </div>
+    </div>
+    <p id="result"></p>
+    <br>
+    <br>
+    <button id="httpRequestButton" onclick="getProgressFromHttp()" style="display:none;">Get Progress using http</button>
+    <p id="apiResponse"></p>
+</body>
+
+</html>

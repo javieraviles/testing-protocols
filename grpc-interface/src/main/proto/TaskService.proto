@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package es.codeurjc.mastercloudapps.grpc;
+
+message TaskRequest {
+    string text = 1;
+}
+
+message TaskResponse {
+    string result = 1;
+}
+
+service TaskService {
+    rpc toUpperCase(TaskRequest) returns (TaskResponse);
+}
